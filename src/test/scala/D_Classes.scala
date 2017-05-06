@@ -22,4 +22,14 @@ class ClassesSpec extends FlatSpec {
     // Note the toString doesn't include c
     assert("MyCaseClass(1,b)" == caseClassInstance.toString)
   }
+
+  "Extending traits" should "return values from trait" in {
+    val mixin: MyMixin = new MyMixin
+    assert(mixin.getName == "Trait 1")
+    assert(mixin.number == 50)
+  }
+
+  it should "override functions" in {
+    assert((new MyMixinOverride).getName == "My Mixin")
+  }
 }
