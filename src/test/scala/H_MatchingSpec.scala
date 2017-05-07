@@ -33,4 +33,13 @@ class MatchingSpec extends FlatSpec {
     assert(
       sayHelloToAll(List("Greg", "Tim", "Larry", "Curly", "Mo")) == "Larry, Curly, Mo are all waiting for you to present!")
   }
+
+  "greetAProgrammer" should "speak truth" in {
+    assert(greetAProgrammer(Programmer("Scala", 1)) == "Scala is awesome!")
+    assert(
+      greetAProgrammer(Programmer("Scala", 2)) == "You should be giving this presentation!")
+    assert(
+      greetAProgrammer(Programmer("Java", 21)) == "Come to the dark side!")
+    assert(greetAProgrammer(Programmer(".NET", 1)) == "I'm sorry...")
+  }
 }

@@ -1,3 +1,5 @@
+case class Programmer(language: String, years: Int)
+
 object Matching {
   def getMeal(time: String): String = time match {
     case "morning" => "eggs and bacon"
@@ -15,5 +17,13 @@ object Matching {
     case "Greg" :: "Tim" :: n =>
       s"${n.mkString(", ")} are all waiting for you to present!"
     case _ => s"Welcome everyone including ${names.mkString(", ")}"
+  }
+
+  def greetAProgrammer(programmer: Programmer): String = programmer match {
+    case Programmer("Scala", n) if n <= 1 => "Scala is awesome!"
+    case Programmer("Scala", n) if n > 1 =>
+      "You should be giving this presentation!"
+    case Programmer("Java", n) => "Come to the dark side!"
+    case Programmer(_, n) if n > 0 => "I'm sorry..."
   }
 }
