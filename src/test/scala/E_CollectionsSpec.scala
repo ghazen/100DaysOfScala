@@ -78,5 +78,14 @@ class CollectionsSpec extends FlatSpec {
     assert(listOfGivenElements.map(_ + 10) == List(10, 11, 12, 13))
   }
 
-//todo:  "Tuples"
+  "Tuples" should "contain given items" in {
+    assert(tuple2._1 == "first")
+    assert(tuple2._2 == "second")
+
+    assert(tuple2 == ("first", "second"))
+  }
+
+  it should "contain items of multiple types" in {
+    assert(tuple5 == ("one", 2, "three", 4, "five"))
+  }
 }
