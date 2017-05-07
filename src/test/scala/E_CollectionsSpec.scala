@@ -39,11 +39,6 @@ class CollectionsSpec extends FlatSpec {
     assert(listB == List(2, 3))
   }
 
-//  it should "not allowing mutating an immutable list" in {
-////    listA = 9
-//    mutable.List(1, 2)
-//  }
-
   "==" should "does not compare arrays" in {
     //http://stackoverflow.com/questions/3737711/why-doesnt-arrays-function-return-true-for-array1-2-array1-2
     //Have to use `sameElements` instead
