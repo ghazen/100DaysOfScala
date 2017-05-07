@@ -83,4 +83,14 @@ class CollectionsSpec extends FlatSpec {
   it should "contain items of multiple types" in {
     assert(tuple5 == ("one", 2, "three", 4, "five"))
   }
+
+  "Maps" should "contain given items" in {
+    assert(map(0) == "zero")
+    assert(map(1) == "one")
+    assert(map(2) == "two")
+  }
+
+  it should "equal coming from a list of tuples" in {
+    assert(map == mapFromList)
+  }
 }

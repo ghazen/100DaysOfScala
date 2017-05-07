@@ -21,4 +21,17 @@ object Collections {
   /** Tuples **/
   val tuple2 = ("first", "second")
   val tuple5 = ("one", 2, "three", 4, "five")
+
+  /** Maps **/
+  val map = Map[Int, String](
+    0 -> "zero",
+    1 -> "one",
+    2 -> "two"
+  )
+
+  val mapFromList = List(
+    (0, "zero"),
+    (1, "one"),
+    (2, "two")
+  ).toMap
 }
