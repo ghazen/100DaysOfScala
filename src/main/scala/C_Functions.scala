@@ -8,4 +8,6 @@ object Functions {
 
   def placeholders = (_: Int) + (_: Int)
   def placeholdersWithParams = (a: Int, b: Int) => a + b
+
+  def functionTakesAFunction(f: (Int, Int) => Int) = f(1, 2)
 }

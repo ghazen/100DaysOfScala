@@ -21,4 +21,8 @@ class FunctionsSpec extends FlatSpec {
     assert(list.reduceLeft(placeholdersWithParams) == 6)
     assert(list.reduceLeft(_ + _) == 6)
   }
+
+  "functionTakesAFunction" should "take a function" in {
+    assert(functionTakesAFunction(_ + _) == 3)
+  }
 }
