@@ -25,7 +25,8 @@ class MyMixinOverride extends MyFirstTrait with MySecondTrait {
   override def getName: String = "My Mixin"
 
   // Note this doesn't compile
-//  override number = 75
+  //  override number = 75
+  override val number = 75
 }
 
 trait MyThirdTrait {
